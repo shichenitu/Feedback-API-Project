@@ -1,98 +1,337 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# Feedback API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Node.js Version](https://img.shields.io/badge/Node.js-20%2B-green)](https://nodejs.org/)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+An open-source REST API for collecting, organizing, and analyzing user feedback. Built with **NestJS**, **TypeScript**, and **SQLite3**/**PostgreSQL**.
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Features
+### Planned Features
 
-## Project setup
+**Phase 1: Core MVP** (current development)
+- Feedback CRUD operations (create, read, update, delete)
+- Survey management with questions
+- Response collection and retrieval
+- Input validation and error handling
+- Swagger/OpenAPI documentation
 
-```bash
-$ npm install
-```
+**Phase 2: Analytics**
+- Response statistics and aggregation
+- Survey analytics endpoints
+- Question-level analytics
+- Query optimization and indexing
 
-## Compile and run the project
+---
 
-```bash
-# development
-$ npm run start
+## Tech Stack
 
-# watch mode
-$ npm run start:dev
+| Technology | Version | Purpose |
+|-----------|---------|---------|
+| **Node.js** | 20.x | Runtime environment |
+| **NestJS** | 11.0 | Progressive Node.js framework with excellent structure |
+| **TypeScript** | 5.7 | Type-safe JavaScript targeting ES2023 |
+| **Jest** | 30.0 | Unit and E2E testing framework |
+| **ESLint & Prettier** | Latest | Code quality and automated formatting |
+| **GitHub Actions** | - | CI/CD automation and testing |
+| **Semantic Release** | - | Automated versioning and changelog generation |
 
-# production mode
-$ npm run start:prod
-```
+---
 
-## Run tests
+## Quick Start
 
-```bash
-# unit tests
-$ npm run test
+### Prerequisites
+- **Node.js** 20.x or higher
+- **npm** or **yarn** package manager
+- **git** for version control
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### Installation
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+# Clone the repository
+git clone https://github.com/shichenitu/Feedback-API-Project.git
+cd Feedback-API-Project
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run start:dev
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+The API will be available at `http://localhost:3000`
 
-## Resources
+### Verify Installation
+```bash
+# You should receive a response
+curl http://localhost:3000
+# Response: "Hello World!"
+```
 
-Check out a few resources that may come in handy when working with NestJS:
+---
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+## API Documentation
 
-## Support
+Swagger/OpenAPI documentation is coming soon and will be available at `/api/docs` once implemented.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+The API will follow RESTful conventions with standard HTTP methods and status codes:
+- `GET` for retrieval
+- `POST` for creation
+- `PUT` for updates
+- `DELETE` for deletion
+- `200/201` for success, `400` for bad requests, `404` for not found, `500` for server errors
 
-## Stay in touch
+---
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Project Structure
+
+```
+src/
+├── main.ts                    # Application entry point
+├── app.module.ts              # Root module
+├── app.controller.ts          # Root controller
+├── app.service.ts             # Root service
+├── user/
+│   ├── user.entity.ts         # User entity definition
+│   ├── user.service.ts        # User business logic (coming soon)
+│   └── user.controller.ts     # User endpoints (coming soon)
+├── feedback/
+│   ├── feedback.entity.ts     # Feedback entity definition
+│   ├── feedback.service.ts    # Feedback business logic (coming soon)
+│   └── feedback.controller.ts # Feedback endpoints (coming soon)
+└── common/
+    ├── filters/               # Exception handlers
+    ├── pipes/                 # Validation pipes
+    └── decorators/            # Custom decorators
+
+test/
+├── app.e2e-spec.ts            # E2E test suite
+└── jest-e2e.json              # E2E test configuration
+
+.github/workflows/
+├── ci.yml                     # Continuous integration pipeline
+└── release.yml                # Automated release workflow
+```
+
+**Design Principles:**
+- **Services** - Contain business logic and database queries
+- **Controllers** - Handle HTTP requests and input validation
+- **Entities** - Define database models and relationships
+- **Error Handling** - Consistent, descriptive error responses
+- **Testing** - Both unit and integration test coverage
+
+---
+
+## Development
+
+### Setting Up Your Environment
+
+```bash
+# Install dependencies
+npm install
+
+# Verify setup by running tests
+npm test
+```
+
+### Available npm Scripts
+
+```bash
+# Development
+npm run start              # Start production server
+npm run start:dev          # Start with hot-reload
+npm run start:debug        # Start with debugger
+npm run start:prod         # Run built application
+
+# Building
+npm run build              # Compile TypeScript to JavaScript
+
+# Code Quality
+npm run lint               # Run ESLint
+npm run format             # Format with Prettier
+
+# Testing
+npm test                   # Run unit tests
+npm run test:watch         # Watch mode for tests
+npm run test:cov           # Generate coverage report
+npm run test:debug         # Debug tests
+npm run test:e2e           # Run end-to-end tests
+
+# Releases
+npm run semantic-release   # Create a new release (CI/CD only)
+```
+
+### Code Style
+
+The project uses **ESLint** and **Prettier** for consistent code formatting:
+
+```bash
+# Lint your code
+npm run lint
+
+# Auto-format your code
+npm run format
+```
+
+### Semantic Commits
+
+This project follows [Conventional Commits](https://www.conventionalcommits.org) specification for clear, semantic commit messages:
+
+```
+feat: add user authentication          # New feature (minor version bump)
+fix: resolve login timeout issue       # Bug fix (patch version bump)
+docs: update API documentation         # Documentation (no version bump)
+refactor: simplify survey logic        # Refactoring (no version bump)
+test: add tests for feedback service   # Tests (no version bump)
+```
+
+Using semantic commits enables automated version management and changelog generation.
+
+---
+
+## Testing
+
+The project includes comprehensive test coverage with both unit and integration tests.
+
+### Running Tests Locally
+
+```bash
+# Unit tests
+npm test
+
+# Unit tests with coverage report
+npm run test:cov
+
+# End-to-end tests
+npm run test:e2e
+
+# Watch mode (re-run on file changes)
+npm run test:watch
+```
+
+### CI/CD Automation
+
+All tests are automatically run on:
+- **Push to main branch** - Triggers full CI pipeline
+- **Pull requests to main** - Blocks merge if tests fail
+
+The GitHub Actions pipeline includes:
+1. **Linting** - ESLint validation (~30s)
+2. **Unit Tests** - Jest with coverage (~45s)
+3. **Build** - TypeScript compilation (~30s)
+4. **E2E Tests** - Integration tests (~60s)
+
+View pipeline status in the **Actions** tab of the GitHub repository.
+
+---
+
+## Roadmap
+
+### Phase 1: Core MVP (Current)
+Establishing the foundation for feedback collection:
+- [ ] Survey CRUD endpoints (create, read, update, delete)
+- [ ] Question management (add, remove, reorder questions)
+- [ ] Response collection and retrieval
+- [ ] Comprehensive input validation
+- [ ] Error handling with descriptive messages
+- [ ] Swagger/OpenAPI documentation
+- [ ] Database schema and migrations
+
+### Phase 2: Analytics (Q2 2026)
+Adding insight capabilities:
+- [ ] Response statistics (count, trends)
+- [ ] Survey analytics endpoints
+- [ ] Question-level analytics
+- [ ] Query optimization with proper indexing
+- [ ] Performance monitoring
+
+### Phase 3+: Ideas for Future Enhancements
+Advanced features ideas (no commitment yet):
+- [ ] Advanced question types (matrix questions, ranking, conditional logic)
+- [ ] Survey templates and presets
+- [ ] Multi-team/organization support with permission models
+- [ ] Data export functionality (CSV, PDF)
+- [ ] Real-time results dashboard
+- [ ] Webhook notifications for new responses
+- [ ] Public/shareable survey links
+- [ ] Response filtering and search
+
+Share your thoughts by adding a new [https://github.com/shichenitu/Feedback-API-Project/issues/new?q=state%3Aopen+label%3Aenhancement](Feature request)
+
+---
+
+## Contributing
+
+We welcome contributions from the community! Whether you're fixing bugs, adding features, or improving documentation, your help is appreciated.
+
+### Getting Started
+
+1. **Fork** this repository
+2. **Clone** your fork locally
+3. **Create** a feature branch: `git checkout -b feat/your-feature-name`
+4. **Make** your changes
+5. **Test** your changes: `npm test && npm run test:e2e`
+6. **Lint** your code: `npm run lint`
+7. **Commit** with semantic messages: `git commit -m "feat: describe your feature"`
+8. **Push** to your fork: `git push origin feat/your-feature-name`
+9. **Open** a pull request to `main` with a clear description
+
+### Requirements
+
+Before submitting a pull request, ensure:
+- ✅ All tests pass: `npm test && npm run test:e2e`
+- ✅ Code is properly formatted: `npm run lint`
+- ✅ New features include tests
+- ✅ Commits use [semantic commit](https://www.conventionalcommits.org) format
+- ✅ Documentation is updated if needed
+
+### Code Review Process
+
+Pull requests are reviewed for:
+- **Strategy** - Does it align with our roadmap and product vision?
+- **Functionality** - Does it work as intended?
+- **Testing** - Are new features properly tested?
+- **Code Quality** - Does it follow project patterns?
+- **Documentation** - Is it clearly documented?
+- **Performance** - Are there any performance implications?
+
+GitHub Actions must show all checks passing before merge is possible.
+
+### Questions or Issues?
+
+- **Report bugs** via GitHub Issues
+- **Discuss features** in GitHub Discussions
+- **Review code** in pull requests
+
+---
 
 ## License
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+This project is licensed under the **MIT License** - see the [LICENSE](./LICENSE) file for details.
+
+The MIT License is a permissive open-source license that allows you to:
+- ✅ Use this software for commercial purposes
+- ✅ Modify the source code
+- ✅ Distribute the software
+- ✅ Use privately
+
+With the requirement to:
+- ⚠️ Include the license and copyright notice
+
+---
+
+## Authors
+
+- [**Shi Chen**](https://github.com/shichenitu) - Co-author
+- [**Gianmarco Murru**](https://github.com/gianmarcomurru) - Co-author
+
+---
+
+## Connect & Support
+
+- **GitHub Issues** - Report bugs or request features
+- **GitHub Discussions** - Ask questions and discuss ideas
+- **License Questions** - See [LICENSE](./LICENSE) file
+
+Thank you for your interest in the Feedback API! 🚀
