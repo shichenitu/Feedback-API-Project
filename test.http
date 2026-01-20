@@ -1,0 +1,17 @@
+### Test One: Create a new product (POST)
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "stockKeepingUnit": "903.493.26",
+  "name": "HEMNES",
+  "description": "Bed frame, sofa bed, with 3 drawers, white,80x200cm",
+  "category": "Sofa beds and guest beds",
+  "price": 2900,
+  "imageUrl": "https://www.ikea.com/dk/da/images/products/hemnes-sengestel-sovesofa-med-3-skuffer-hvid__1180454_pe896328_s5.jpg?f=xl"
+}
+
+###
+
+### Test Two: Get a list of all the products (GET)
+GET http://localhost:3000/products
