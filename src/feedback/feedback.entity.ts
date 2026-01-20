@@ -1,3 +1,5 @@
+import { UUID } from "crypto";
+
 // Define the enum types 
 export enum FeedbackStatus{
     OPEN = 'open',
@@ -9,7 +11,9 @@ export enum FeedbackStatus{
 export class feedback{
     id: string;
     authorId: string;
+    productId: string; // Newly added
     comment: string;
+
     valueRating: number; // should rating be optional or mandatory? Let's say mandatory for now
     practicalityRating: number;
     safetyRating: number;
@@ -18,7 +22,9 @@ export class feedback{
     aestheticsRating: number;
     durabilityRating: number;
     sustainabilityRating: number;
+
     status: FeedbackStatus; // not sure if we should keep this, maybe yes
+    
     createAt: Date;
     updateAt: Date;
 }
