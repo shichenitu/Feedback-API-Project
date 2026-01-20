@@ -12,7 +12,7 @@ export class User{
     email: string;
     passwordHash: string;
     role: UserRole; // it is from the enum definition above
-    phoneNumber: string;
+    phoneNumber: string; // should it be optional?
     createAt: Date;
     updateAt: Date;
 }
