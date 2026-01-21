@@ -8,7 +8,7 @@ export enum FeedbackStatus{
 }
 
 // Define the Class of Feedback
-export class feedback{
+export class Feedback{
     id: string;
     authorId: string;
     productId: string; // Newly added
