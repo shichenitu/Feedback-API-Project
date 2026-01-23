@@ -1,11 +1,12 @@
 {
-  "name": "my-awesome-api",
+  "name": "feedback-api",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "An open-source Feedback API using TypeScript/NestJS.",
+  "author": "Shi Chen & Gianmarco Murru",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "prepare": "husky install",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -55,7 +56,10 @@
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.3",
-    "typescript-eslint": "^8.20.0"
+    "typescript-eslint": "^8.20.0",
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "husky": "^8.0.3"
   },
   "jest": {
     "moduleFileExtensions": [

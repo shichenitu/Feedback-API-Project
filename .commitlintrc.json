@@ -1,0 +1,26 @@
+{
+  "extends": ["@commitlint/config-conventional"],
+  "rules": {
+    "type-enum": [
+      "error",
+      "always",
+      [
+        "feat",
+        "fix",
+        "perf",
+        "revert",
+        "docs",
+        "style",
+        "refactor",
+        "test",
+        "ci",
+        "chore"
+      ]
+    ],
+    "type-case": ["error", "always", "lowercase"],
+    "type-empty": ["error", "never"],
+    "subject-empty": ["error", "never"],
+    "subject-full-stop": ["error", "never", "."],
+    "subject-case": ["error", "never", ["start-case", "pascal-case"]]
+  }
+}
